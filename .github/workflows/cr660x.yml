@@ -24,7 +24,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     
     steps:
@@ -94,13 +94,22 @@ jobs:
         sudo rm -rf /etc/apt/sources.list.d/* /usr/local/lib/android /opt/ghc /usr/share/dotnet /usr/local/graalvm /usr/local/.ghcup \
         /usr/local/share/powershell /usr/local/share/chromium /usr/local/lib/node_modules
         sudo timedatectl set-timezone "$TZ"
-        sudo chown $USER:$GROUPS $GITHUB_WORKSPACE
+        sudo mkdir -p /workdir
+        sudo chown $USER:$GROUPS /workdir
 
     - name: Clone source code
-      working-directory: ./
+      working-directory: /workdir
       run: |
+        df -hT $PWD
         git clone $REPO_URL openwrt
-        echo "WORKING_DIR=$PWD/openwrt" >> $GITHUB_ENV
+        ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+
+    - name: Load cache
+      uses: bonnie2980/cachewrtbuild@main
+      with:
+        ccache: true
+        mixkey: 'mt7915'
+        prefix: ${{ github.workspace }}/openwrt
 
     - name: Load custom feeds
       run: |
@@ -120,13 +129,6 @@ jobs:
         cd openwrt
         ./scripts/feeds update -a
         ./scripts/feeds install -a
-
-    - uses: Bonnie2980/cachewrtbuild@main
-      with:
-        ccache: false
-        clean: true
-        mixkey: "mt7915"
-        prefix: ${{ env.WORKING_DIR }}
 
     - name: Load custom configuration
       run: |
@@ -174,7 +176,7 @@ jobs:
         cd openwrt/bin/targets/*/*
         rm -rf packages
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
-        echo "STATUS=success" >> $GITHUB_OUTPUT
+        echo "STATUS=success" >> $GITHUB_ENV
   
     - name: Upload config to artifact
       if: env.STATUS == 'success' && env.UPLOAD_CONFIG == 'true'
