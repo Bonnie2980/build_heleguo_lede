@@ -57,60 +57,60 @@ jobs:
         map: |
           {
             "KONKA_KOMI-A8": {
-              "CONFIG_FILE": "KONKA_KOMI_A8.config",
-              "DIY_P2_SH": "diy-part2_konka_komi_a8.sh"
+              "CONFIG_FILE": "configs/KONKA_KOMI_A8.config",
+              "DIY_P2_SH": "scripts/diy-part2_konka_komi_a8.sh"
             },
             "MAIPU_MPAX18": {
-              "CONFIG_FILE": "MAIPU_MPAX18.config",
-              "DIY_P2_SH": "diy-part2_maipu_mpax18.sh"
+              "CONFIG_FILE": "configs/MAIPU_MPAX18.config",
+              "DIY_P2_SH": "scripts/diy-part2_maipu_mpax18.sh"
             },
             "ZTT_RX6000": {
-              "CONFIG_FILE": "ZTT_RX6000.config",
-              "DIY_P2_SH": "diy-part2_ztt_rx6000.sh"
+              "CONFIG_FILE": "configs/ZTT_RX6000.config",
+              "DIY_P2_SH": "scripts/diy-part2_ztt_rx6000.sh"
             },
             "Qihoo360_T6GS": {
-              "CONFIG_FILE": "Qihoo360_T6GS.config",
-              "DIY_P2_SH": "diy-part2_qihoo360_t6gs.sh"
+              "CONFIG_FILE": "configs/Qihoo360_T6GS.config",
+              "DIY_P2_SH": "scripts/diy-part2_qihoo360_t6gs.sh"
             },
             "Qihoo360_T6M": {
-              "CONFIG_FILE": "Qihoo360_T6M.config",
-              "DIY_P2_SH": "diy-part2_qihoo360_t6m.sh"
+              "CONFIG_FILE": "configs/Qihoo360_T6M.config",
+              "DIY_P2_SH": "scripts/diy-part2_qihoo360_t6m.sh"
             },
             "Qihoo360_T6U": {
-              "CONFIG_FILE": "Qihoo360_T6U.config",
-              "DIY_P2_SH": "diy-part2_qihoo360_t6u.sh"
+              "CONFIG_FILE": "configs/Qihoo360_T6U.config",
+              "DIY_P2_SH": "scripts/diy-part2_qihoo360_t6u.sh"
             },
             "JCG_Q20": {
-              "CONFIG_FILE": "JCG_Q20.config",
-              "DIY_P2_SH": "diy-part2_jcg_q20.sh"
+              "CONFIG_FILE": "configs/JCG_Q20.config",
+              "DIY_P2_SH": "scripts/diy-part2_jcg_q20.sh"
             },
             "JCG_Q10Pro": {
-              "CONFIG_FILE": "JCG_Q10Pro.config",
-              "DIY_P2_SH": "diy-part2_jcg_q10pro.sh"
+              "CONFIG_FILE": "configs/JCG_Q10Pro.config",
+              "DIY_P2_SH": "scripts/diy-part2_jcg_q10pro.sh"
             },
             "FCJ_GAX1800_White": {
-              "CONFIG_FILE": "FCJ_GAX1800_White.config",
-              "DIY_P2_SH": "diy-part2_fcj_gax1800_white.sh"
+              "CONFIG_FILE": "configs/FCJ_GAX1800_White.config",
+              "DIY_P2_SH": "scripts/diy-part2_fcj_gax1800_white.sh"
             },
             "FCJ_GAX1800_Black": {
-              "CONFIG_FILE": "FCJ_GAX1800_Black.config",
-              "DIY_P2_SH": "diy-part2_fcj_gax1800_black.sh"
+              "CONFIG_FILE": "configs/FCJ_GAX1800_Black.config",
+              "DIY_P2_SH": "scripts/diy-part2_fcj_gax1800_black.sh"
             },
             "HBD_WRL18M4GD": {
-              "CONFIG_FILE": "HBD_WRL18M4GD.config",
-              "DIY_P2_SH": "diy-part2_hbd_wrl18m4gd.sh"
+              "CONFIG_FILE": "configs/HBD_WRL18M4GD.config",
+              "DIY_P2_SH": "scripts/diy-part2_hbd_wrl18m4gd.sh"
             },
             "SIM_AX1800T": {
-              "CONFIG_FILE": "SIM_AX1800T.config",
-              "DIY_P2_SH": "diy-part2_sim_ax1800t.sh"
+              "CONFIG_FILE": "configs/SIM_AX1800T.config",
+              "DIY_P2_SH": "scripts/diy-part2_sim_ax1800t.sh"
             },
             "Hair_HAR_20S2U1": {
-              "CONFIG_FILE": "Hair_HAR_20S2U1.config",
-              "DIY_P2_SH": "diy-part2_hair_har_20s2u1.sh"
+              "CONFIG_FILE": "configs/Hair_HAR_20S2U1.config",
+              "DIY_P2_SH": "scripts/diy-part2_hair_har_20s2u1.sh"
             },
             ".*": {
-              "CONFIG_FILE": "JCG_Q20.config",
-              "DIY_P2_SH": "diy-part2_jcg_q20.sh"
+              "CONFIG_FILE": "configs/JCG_Q20.config",
+              "DIY_P2_SH": "scripts/diy-part2_jcg_q20.sh"
             }
           }
         export_to: env
