@@ -104,9 +104,9 @@ jobs:
               "CONFIG_FILE": "configs/SIM_AX1800T.config",
               "DIY_P2_SH": "scripts/diy-part2_sim_ax1800t.sh"
             },
-            "Hair_HAR_20S2U1": {
-              "CONFIG_FILE": "configs/Hair_HAR_20S2U1.config",
-              "DIY_P2_SH": "scripts/diy-part2_hair_har_20s2u1.sh"
+            "Haier_HAR_20S2U1": {
+              "CONFIG_FILE": "configs/Haier_HAR_20S2U1.config",
+              "DIY_P2_SH": "scripts/diy-part2_haier_har_20s2u1.sh"
             },
             ".*": {
               "CONFIG_FILE": "configs/JCG_Q20.config",
