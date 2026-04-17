@@ -13,7 +13,7 @@
 sed -i 's/192.168.2.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 
 # 修改主机名字，把ImmortalWrt修改你喜欢的就行（不能纯数字或者使用中文）
-sed -i 's/LEDE/JCG-Q20/g' package/base-files/files/bin/config_generate
+#sed -i 's/LEDE/JCG-Q20/g' package/base-files/files/bin/config_generate
 
 # 修改闭源驱动2G wifi名称
 sed -i 's/SSID1=MTK_HARRIER_AP_2.4G/SSID1=JCG_Q20-2.4G/g' package/mtk/wifi-profile/files/mt7915/mt7915.dbdc.b0.dat
