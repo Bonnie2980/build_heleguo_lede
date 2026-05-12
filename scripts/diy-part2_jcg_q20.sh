@@ -188,3 +188,6 @@ sed -i '/customized in this file/a net.netfilter.nf_conntrack_max=165535' packag
 #添加smartdns
 #git clone https://github.com/pymumu/openwrt-smartdns package/smartdns
 #git clone -b lede https://github.com/pymumu/luci-app-smartdns.git package/luci-app-smartdns
+
+#删除feeds中的luci-app-openclash
+rm -rf feeds/luci/applications/luci-app-openclash
